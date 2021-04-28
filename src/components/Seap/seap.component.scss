@@ -1,0 +1,15 @@
+.seap-message{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 8px;
+    @media (min-width: 768px) {
+        max-width: 70%;
+    }
+    .display-2{
+        font-weight: 900;
+        text-transform: uppercase;
+        max-width: 14ch;
+    }
+}

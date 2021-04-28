@@ -1,0 +1,10 @@
+input{
+    width: 100%;
+    padding: 16px 8px;
+    background-color: rgb(248, 201, 106);
+    border: solid 1px;
+    outline: inherit;
+    &::placeholder{
+        color: inherit;
+    }
+}

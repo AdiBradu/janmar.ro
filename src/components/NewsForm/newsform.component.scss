@@ -1,0 +1,35 @@
+.news-form-body{
+    height: 48px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #003049;
+    input{
+        width: 70%;
+        height: auto;
+        background-color: transparent;
+        color:#003049;
+        border: none;
+        padding: 16px;
+        &::placeholder{
+            color:#003049;
+        }
+    }
+    button{
+        border: none;
+    }
+    .send-btn{
+        background-color: #003049;
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            opacity: 0.8;
+            cursor: pointer;
+        }
+    }
+}

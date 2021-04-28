@@ -1,0 +1,13 @@
+.hamburger-menu{
+    position: relative;
+    // z-index: 1200;
+    margin-left: auto;
+    &:hover{
+        cursor: pointer;
+        opacity: 0.8;
+    }
+    svg{
+        height: auto;
+        width: 30px;
+    }
+}

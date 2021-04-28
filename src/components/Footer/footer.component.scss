@@ -1,0 +1,59 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 8px;
+    @media (min-width: 768px) {
+        max-width: 70%;
+    }
+    @media (min-width: 990px) {
+        max-width: 60%;
+    }
+    .display-2{
+        display: inline-block;
+        white-space: nowrap;
+        font-weight: 900;
+        max-width: 14ch;
+    }
+    p{
+        letter-spacing: 1px;
+        font-weight: 700;
+        width: auto;
+        // max-width: 50ch;
+        &:hover{
+            opacity: 0.7;
+            cursor: pointer;
+        }
+    }
+    .zi-logo{
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        padding: 64px 0px;
+    }
+    .janmar-logo{
+        p{
+            letter-spacing: 0px;
+            font-weight: 400;
+            font-size: 12px;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+    }
+    .firma{
+        margin-top: 32px;
+        img{
+            width: 160px;
+            height: auto;
+        }
+    }
+    .copyright{
+        padding-top: 64px;
+        p{
+            letter-spacing: 0px;
+            font-weight: 700;
+            font-size: 12px;
+        }
+    }
+}

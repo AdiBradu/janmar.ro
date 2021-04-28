@@ -1,0 +1,87 @@
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    // min-height: 100vh;
+    background-color: rgba(0,49,73,1);
+    p{
+        color: rgba(252,191,73,1);
+    }
+    @media (min-width: 768px) {
+        max-width: 80%;
+        margin: auto;
+    }
+    .contact-body{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        padding: 64px 16px;
+        h2{
+            font-weight: 700;
+            text-transform: uppercase;
+            color: rgba(252,191,73,1);
+        }
+        .social{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .social-icons{
+                display: flex;
+                gap: 32px;
+                svg{
+                    width: 40px;
+                    height: auto;
+                    fill: rgba(252,191,73,1);
+                    &:hover{
+                        opacity: 0.8;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .locations{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            .location{
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                width: 100%;
+                h4{
+                    color: rgba(252,191,73,1);
+                    text-transform: capitalize;
+                }
+                .location-body{
+                    width: 100%;
+                    display: flex;
+                    gap: 16px;
+                    .location-icon{
+                        margin-left: auto;
+                        a{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 8px;
+                            align-items: center;
+                            justify-content: center;
+                            svg{
+                                width: 40px;
+                                height: auto;
+                                &:hover{
+                                    opacity: 0.8;
+                                    cursor: pointer;
+                                }
+                            }
+                            p{
+                                color: rgba(252,191,73,0.7);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

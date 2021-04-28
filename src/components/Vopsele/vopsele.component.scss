@@ -1,0 +1,99 @@
+.container{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+    .vopsele-message{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        gap: 8px;
+        margin-left: auto;
+        z-index: 1000;
+        @media (min-width: 768px) {
+            width: 70%;
+        }
+        h1{
+            font-weight: 900;
+            line-height: 90%;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            max-width: 20ch;
+        }
+    }
+    .spray{
+        display: flex;
+        position: absolute;
+        @media screen and (max-aspect-ratio: '3/4') {
+            right: calc(1/12 * 100%);
+            bottom: 0;
+        }
+        @media (min-width:768px) and (max-aspect-ratio: '3/4') {
+            right: calc(7/12 * 100%);
+            bottom: calc(1/12 * 100%);
+        }
+        @media (min-width:768px) and (min-aspect-ratio: '4/3') {
+            right: calc(7/12 * 100%);
+            bottom: calc(1/12 * 100%);
+        }
+        svg{
+            height: auto;
+            width: 300px;
+            fill: rgba(255, 255, 255, 0.2);
+            .circles{
+                opacity: 0.5;
+                circle{
+                    animation: pulse 3s infinite;
+                    transform-origin: center center;
+                    &:nth-child(1){
+                        fill: rgb(201, 13, 13);
+                    }
+                    &:nth-child(2){
+                        fill: rgb(238, 118, 39);
+                    }
+                    &:nth-child(3){
+                        fill: rgb(248, 244, 0);
+                    }
+                    &:nth-child(4){
+                        fill: rgb(13, 201, 38);
+                    }
+                    &:nth-child(5){
+                        fill: rgb(13, 201, 113);
+                    }
+                    &:nth-child(6){
+                        fill: rgb(13, 201, 201);
+                    }
+                    &:nth-child(7){
+                        fill: rgb(13, 126, 201);
+                    }
+                    &:nth-child(8){
+                        fill: rgb(13, 57, 201);
+                    }
+                    &:nth-child(9){
+                        fill: rgb(85, 13, 201);
+                    }
+                    &:nth-child(10){
+                        fill: rgb(195, 13, 201);
+                    }
+                    &:nth-child(11){
+                        fill: rgb(201, 13, 129);
+                    }
+                    &:nth-child(12){
+                        fill: rgb(201, 13, 54);
+                    }
+                }
+            }        
+        }
+    }
+}
+
+@keyframes pulse 
+{
+    from { opacity: 0; transform: scale(0); }
+    to   { opacity: 1; transform: scale(1); }
+}
