@@ -68,6 +68,7 @@
                             align-items: center;
                             justify-content: center;
                             svg{
+                                fill:rgb(252, 191, 73);
                                 width: 40px;
                                 height: auto;
                                 &:hover{
@@ -77,6 +78,7 @@
                             }
                             p{
                                 color: rgba(252,191,73,0.7);
+                                text-align: center;
                             }
                         }
                     }

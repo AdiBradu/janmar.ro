@@ -28,9 +28,12 @@
         background-size: cover;
         background-position: center;
         .container{
+            display: flex;
+            flex-direction: column;
             @media (min-width: 768px) {
                 width: 80%;
                 margin: auto;
+                flex-direction: row;
             }
             @media (min-width: 990px) {
                 max-width: 800px;

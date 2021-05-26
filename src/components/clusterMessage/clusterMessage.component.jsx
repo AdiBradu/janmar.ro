@@ -4,6 +4,7 @@ import Button from '../button/button.component'
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom'
 import {ReactComponent as Crane} from '../../assets/crane.svg'
+import { ReactComponent as LocationLogo } from '../../assets/location.svg';
 
 const container = {
     initial: { opacity: 0 },
@@ -49,15 +50,24 @@ export default function ClusterMessage(props) {
         <div className="container">
                 <motion.div className="cluster-message" style={props.style}  initial="initial" animate="actual" variants={container}>
                     <motion.h1 variants={item}>materiale de constructii, gradinarit & bricolaj</motion.h1>
-                    <motion.p variants={item}>Construi, i,preuna din 1993</motion.p>
-                    <motion.p variants={item}>Nu ai gasit ce cautai? Preluam si comenzi speciale</motion.p>
-                    {/* <motion.p variants={item}>Preluam si comenzi speciale</motion.p> */}
-                    <motion.p variants={item}>Apeleaza-ne la +40 732 409 952 sau +40 722 694 544</motion.p>
+                    <motion.p variants={item}>Construim impreuna din 1993.</motion.p>
+                    <motion.p variants={item}>Nu ai gasit ce cautai?<br/> Preluam si comenzi speciale.</motion.p>
+                    <motion.p variants={item}>Apeleaza-ne la<br/> +40 732 409 952 sau<br/> +40 722 694 544</motion.p>
                     <Link 
                     to="/produse" 
                     >
                         <Button/>
                     </Link>
+                </motion.div>
+                <motion.div className="pinpoints" initial="initial" animate="actual" variants={container}>
+                    <motion.a variants={item} href="https://goo.gl/maps/Mk8eBUiNZNicSZtd8">
+                        <LocationLogo/>
+                        <p>Depozit Fagaras</p>
+                    </motion.a>
+                    <motion.a variants={item} href="https://goo.gl/maps/QAKYNVa3eD4Ju8Hv9">
+                        <LocationLogo/>
+                        <p>Depozit Oltet</p>
+                    </motion.a>
                 </motion.div>
         </div>
         <motion.div className="triangle" initial="initial" animate="actual" variants={triangle}>
