@@ -8,13 +8,6 @@ import { motion } from "framer-motion"
 
 export default function Newsletter() {
 
-    const [click, setClick] = useState(false)
-    console.log(click)
-
-    const handleClick = () => {
-        setClick(!click)
-    }
-
     const animation = useAnimation()
     const [newsRef, inView] = useInView({
         triggerOnce: true,
@@ -34,8 +27,7 @@ export default function Newsletter() {
                 <div className="newsletter-message">
                     <div className="display-2"><h1>Newsletter</h1></div>
                     <p>Abonează-te la newsletter-ul nostru și primești cele mai noi știri din domeniu cât si promoțiile noastre.</p>
-                    <NewsForm click={click} handleClick={handleClick}/>
-                    <h5 style={ click ? {display: "block"} : {display: "none"} }>Multumim pentru abonare!</h5>
+                    <NewsForm/>
                 </div>"
                 <motion.div 
                     className="air" 

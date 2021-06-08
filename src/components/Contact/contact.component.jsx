@@ -6,6 +6,7 @@ import { ReactComponent as LocationLogo } from '../../assets/location.svg';
 import { useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer'
 import { motion } from "framer-motion"
+import ContactForm from '../../components/ContactForm/ContactForm.component'
 
 export default function Contact() {
 
@@ -156,6 +157,10 @@ export default function Contact() {
                                     </motion.div>
                                 </div>
                             </div>
+                        </div>
+                        <div className="contact-form">
+                            <h4>Lasa-ne un mesaj</h4>
+                            <ContactForm/>
                         </div>
                     </div>
                 </div>

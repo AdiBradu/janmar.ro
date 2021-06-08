@@ -1,0 +1,40 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    label{
+        color: rgba(252,191,73,1);
+    }
+    input{
+        margin-top: 4px;
+    }
+    input:-webkit-autofill
+    {
+        -webkit-box-shadow: 0 0 0 30px rgb(248, 201, 106) inset !important;
+    }
+    input:-webkit-autofill
+    {
+    -webkit-text-fill-color: rgba(0,49,73,1)!important;
+    }
+    .message{
+        display: flex;
+        flex-direction: column;
+        textarea{
+            background-color: rgb(248, 201, 106);
+            height: 100px;
+            margin-top: 4px;
+            padding: 16px 8px;
+            color: rgba(0,49,73,1);
+        }
+    }
+    button{
+        padding: 16px;
+        background-color: rgba(252,191,73,1);
+        margin-top: 16px;
+        color: rgba(0,49,73,1);
+        &:hover{
+            cursor: pointer;
+            background-color: rgba(252,191,73,0.8);
+        }
+    }
+}

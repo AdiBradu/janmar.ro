@@ -85,5 +85,13 @@
                 }
             }
         }
+        .contact-form{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            h4{
+                color: rgba(252,191,73,1);
+            }
+        }
     }
 }
