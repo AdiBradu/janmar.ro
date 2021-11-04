@@ -38,4 +38,23 @@
             text-align: center;
         }
     }
+    .pinpoint-one, .pinpoint-two{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+        .point{
+            position: relative;
+            display: flex;
+            gap: 24px;
+            svg{
+                width: 50px;
+                height: auto;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }

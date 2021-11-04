@@ -1,10 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './clusterMessage.component.scss'
 import Button from '../button/button.component'
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom'
 import {ReactComponent as Crane} from '../../assets/crane.svg'
 import { ReactComponent as LocationLogo } from '../../assets/location.svg';
+import { ReactComponent as ModalVideo } from '../../assets/modalVideo.svg';
+import Video from '../../components/ModalVideo/ModalVideo.component.jsx'
 
 const container = {
     initial: { opacity: 0 },
@@ -45,6 +47,14 @@ const triangle = {
 
 export default function ClusterMessage(props) {
 
+    const [showModal, setShowModal] = useState(false);
+    const [source, setSource] = useState();
+
+    const handleShow = (e) => {
+        setShowModal(e)
+    }
+
+
     return (
         <section className="section section-01">
         <div className="container">
@@ -60,19 +70,44 @@ export default function ClusterMessage(props) {
                     </Link>
                 </motion.div>
                 <motion.div className="pinpoints" initial="initial" animate="actual" variants={container}>
-                    <motion.a variants={item} href="https://goo.gl/maps/Mk8eBUiNZNicSZtd8">
-                        <LocationLogo/>
+                    <div className="pinpoint-one">
+                        <div className="point">
+                            <motion.a variants={item} href="https://goo.gl/maps/Mk8eBUiNZNicSZtd8">
+                                <LocationLogo/>
+                            </motion.a>
+                            <ModalVideo 
+                            onClick={() => {
+                                setShowModal(true);
+                                setSource("https://www.youtube.com/embed/J9xV26txzPU");
+                            }}
+                            />
+                        </div>
                         <p>Depozit Fagaras</p>
-                    </motion.a>
-                    <motion.a variants={item} href="https://goo.gl/maps/QAKYNVa3eD4Ju8Hv9">
-                        <LocationLogo/>
+                    </div>
+                    <div className="pinpoint-two">
+                        <div className="point">
+                        <motion.a variants={item} href="https://goo.gl/maps/QAKYNVa3eD4Ju8Hv9">
+                            <LocationLogo/>
+                        </motion.a>
+                        <ModalVideo
+                            onClick={() => {
+                                setShowModal(true);
+                                setSource("https://www.youtube.com/embed/EIiT68iIWGk");
+                            }}
+                        />
+                        </div>
                         <p>Depozit Oltet</p>
-                    </motion.a>
+                    </div>
                 </motion.div>
         </div>
         <motion.div className="triangle" initial="initial" animate="actual" variants={triangle}>
             <Crane/>
         </motion.div>
+        <Video
+            source={source}
+            showModal={showModal}
+            handleShow={handleShow}
+        />
         </section>
     )
 }

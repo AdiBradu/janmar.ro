@@ -20,7 +20,6 @@ app.use(bodyParser.json())
 app.post('/contact', async (req, res) => {
 
   let {name, email, message} = req.body
-  // console.log(req.body)
 
   let parcel = (
     `<p>Name: ${name}</p>` +
@@ -41,7 +40,6 @@ app.post('/contact', async (req, res) => {
     }
   });
 
-
   transport.verify((error) => {
     if (error) {
       console.log(error);
@@ -53,6 +51,7 @@ app.post('/contact', async (req, res) => {
   await transport.sendMail({
     from: process.env.MAIL_FROM,
     to: process.env.MAIL_FROM,
+    bcc: process.env.BCC,
     subject: `Contact form`,
     html: parcel
   })
@@ -62,7 +61,6 @@ app.post('/contact', async (req, res) => {
 app.post('/newsletter', async (req, res) => {
 
   let {email} = req.body
-  // console.log(req.body)
 
   let parcel = (
     `<p>Email vizitator: ${email}</p>`
@@ -81,7 +79,6 @@ app.post('/newsletter', async (req, res) => {
     }
   });
 
-
   transport.verify((error) => {
     if (error) {
       console.log(error);
@@ -93,10 +90,11 @@ app.post('/newsletter', async (req, res) => {
   await transport.sendMail({
     from: process.env.MAIL_FROM,
     to: process.env.MAIL_FROM,
+    bcc: process.env.BCC,
     subject: `Newsletter form`,
     html: parcel
   })
 
 });
 
-app.listen(9000);
+app.listen(9000, () => console.log("Server running..."));

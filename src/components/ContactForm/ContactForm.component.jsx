@@ -40,12 +40,12 @@ const ContactForm = () => {
         <textarea id="message" required onChange={(event) => setMessage(event.target.value)}/>
       </div>
       <button 
-      type="submit" 
-      onClick={ (event) => {
-        event.preventDefault()
-        handleSend()
-      }}>
-          {status}
+        type="submit" 
+        onClick={ (event) => {
+          event.preventDefault()
+          handleSend()
+        }}>
+        {status}
       </button>
     </form>
   );
